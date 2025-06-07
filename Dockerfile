@@ -46,5 +46,5 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 # 暴露端口
 EXPOSE 3001
 
-# 启动应用
-CMD ["node", "server.js"] 
+# 启动应用，使用环境变量中的端口
+CMD ["sh", "-c", "node server.js -p ${PORT}"] 

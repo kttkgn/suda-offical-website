@@ -5,6 +5,12 @@ const nextConfig = {
     unoptimized: true,
     domains: ['localhost'],
   },
+  server: {
+    port: 3001,
+  },
+  env: {
+    PORT: process.env.PORT || '3001',
+  },
   async headers() {
     return [
       {
