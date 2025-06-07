@@ -26,7 +26,7 @@ FROM base AS runner
 # 设置环境变量
 ENV NODE_ENV=production \
     NEXT_TELEMETRY_DISABLED=1 \
-    PORT=3000 \
+    PORT=3001 \
     HOSTNAME="0.0.0.0"
 
 # 创建非 root 用户
@@ -44,7 +44,7 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
 # 暴露端口
-EXPOSE 3000
+EXPOSE 3001
 
 # 启动应用
 CMD ["node", "server.js"] 
