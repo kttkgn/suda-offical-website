@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   web:
     build:
@@ -13,8 +11,8 @@ services:
     restart: always
     container_name: suda-official-website
     networks:
-      - app-network
+      - suda-network
 
 networks:
-  app-network:
+  suda-network:
     driver: bridge 

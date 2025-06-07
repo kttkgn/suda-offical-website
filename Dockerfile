@@ -44,7 +44,7 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
 # 暴露端口
-EXPOSE ${PORT}
+EXPOSE 3001
 
 # 启动应用
 CMD ["node", "server.js"] 
